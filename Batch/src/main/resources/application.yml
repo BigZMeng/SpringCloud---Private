@@ -1,0 +1,30 @@
+server:
+  port: 8001
+  
+spring:
+  application:
+    name: Batch
+  #数据源
+  datasource:
+    ebiz-uat-db:
+      driver-class-name: com.mysql.jdbc.Driver
+      url: jdbc:mysql://10.3.14.75:3306/ebiz?useUnicode=true&characterEncoding=UTF-8&useSSL=true    #dev
+      username: admin
+      password: 1qaz@WSX
+    localhost-db:
+      driver-class-name: com.mysql.jdbc.Driver
+      url: jdbc:mysql://localhost:3306/pud_test?useUnicode=true&characterEncoding=UTF-8&useSSL=true    #dev
+      username: root
+      password: root
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8000/eureka/
+
+#mybatis:
+  #type-aliases-package: com.style.db.* #Mapper对应的实体类路径
+  #configuration:
+    #map-underscore-to-camel-case: true
+    #cache-enabled: true
+    

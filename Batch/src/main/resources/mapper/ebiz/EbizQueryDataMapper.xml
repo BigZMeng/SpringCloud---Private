@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://www.mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.stylely.db.ebiz.mapper.EbizQueryDataMapper">
+	<select id="queryDataService" parameterType="String" resultType="String">
+		select a.city_type from ebiz_city_code a
+		where a.city_code = #{value}
+	</select>
+</mapper>
